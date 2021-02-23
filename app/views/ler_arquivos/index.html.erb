@@ -1,0 +1,12 @@
+<%= form_with url: "/ler_arquivos/ler_arquivo", multipart: true do |form| %>
+    <%= form.file_field :arquivo %>
+    <%= form.submit "Enviar" %>
+<% end %>
+</br>
+</br>
+<div>
+    <h3>
+        <%=  link_to "Saldo por Loja", controller: "transacaos", action: "saldo_por_loja" %>
+    </h3>
+</div>
+  

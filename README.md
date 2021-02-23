@@ -74,3 +74,39 @@ Adicionalmente, tentaremos verificar a sua familiarização com as bibliotecas p
 ---
 
 Boa sorte!
+
+
+
+---
+
+# Configuração do projeto
+
+1. Instale o RVM
+    - gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    - curl -sSL https://get.rvm.io | bash -s stable --ruby
+    - source /usr/local/rvm/scripts/rvm
+
+2. Instale o Ruby
+    - rvm get stable --autolibs=enable
+    - rvm install ruby-2.6.3
+    - rvm --default use ruby-2.6.3
+
+3. Instale o Rails
+    - gem install rails -v 5.2.4.5
+
+4. Instale o Postgres
+    - apt-get -y install postgresql postgresql-contrib libpq-dev
+    - su - postgres
+    - psql
+    - \password postgres
+    - Enter new password:
+    - Utilizei 'postgres' como password, caso queira alterar terá também que alterar no arquivo config/database.yml
+
+5. Rodar comandos do Rails
+    - bundle
+    - rails db:setup
+    - rails db:migrate
+    - rails db:seed
+
+    - rails s (Para dar start na aplicação)
+

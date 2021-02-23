@@ -1,0 +1,23 @@
+<div class="panel-body">
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Loja</th>
+                <th>Saldo Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @saldo_por_loja.each do |loja| %>
+                <tr>
+                    <td><%= loja.first %></td>
+                    <td><%= loja.last %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
+<div>
+    <h3>
+        <%=  link_to "Voltar", controller: "ler_arquivos", action: "index" %>
+    </h3>
+</div>
